@@ -1,5 +1,8 @@
 require "todays_tweets/version"
+require "todays_tweets/cli"
+require "todays_tweets/scraper"
+require "todays_tweets/twitter"
 
-module TodaysTweets
-  # Your code goes here...
-end
+require "nokogiri"
+require "open-uri"
+require "colorize"

@@ -1,0 +1,3 @@
+class TodaysTweets::Scraper
+
+end
