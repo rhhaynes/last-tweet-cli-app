@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "todays_tweets"
+
+TodaysTweets::CLI.new.call
