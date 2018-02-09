@@ -2,9 +2,15 @@ class LastTweet::Scraper
 
   def self.scrape(url, what_to_scrape)
     page = Nokogiri::HTML(open(url))
+
     attributes = what_to_scrape.collect do |k,v|
-      [ k, page.css(v[0]).send(v[1]) ]
+      case v[2]
+      when 'hash_key' then [ k, page.css(v[0]).first[ v[1] ]    ]
+      when 'method'   then [ k, page.css(v[0]).first.send(v[1]) ]
+      else                 [ k, page.css(v[0]).first.send(v[1]) ]
+      end
     end
+
     attributes.to_h
   end
 

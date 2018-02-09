@@ -13,8 +13,8 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.16)
+  last_tweet!
   rake (~> 10.0)
-  todays_tweets!
 
 BUNDLED WITH
    1.16.1

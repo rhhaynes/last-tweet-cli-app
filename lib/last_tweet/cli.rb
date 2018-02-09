@@ -25,21 +25,26 @@ class LastTweet::CLI
   end
 
   def show_menu
-    twitter_handles = nil
-    unless ['EXIT','Exit','exit'].include?(twitter_handles)
-      puts "Whose tweets would you like to see?  Enter exit when finished."
+    puts "Whose tweets would you like to see?  Enter exit when finished."
+    twitter_handles = 'not_exit'
+    until twitter_handles.downcase == 'exit'
       twitter_handles = gets.strip
-      show_tweets(twitter_handles)
+      unless twitter_handles.downcase == 'exit'
+        show_tweets(twitter_handles)
+        puts
+        puts "Would you like to see any additional tweets?  Enter exit when finished."
+      end
       # possible errors: invalid handles, private accounts, no tweets, etc.
     end
   end
 
   def show_tweets(twitter_handles)
+    twitter_handles = twitter_handles.gsub(",", " ").split
     twitter_handles.collect do |handle|
       tweet = LastTweet::Tweet.create_from_handle(handle)
       puts
-      puts "#{tweet.account.name} (#{tweet.account.handle}) at #{tweet.timestamp}"
-      puts "#{tweet.account.bio}" unless tweet.bio == nil
+      puts "#{tweet.account.handle} at #{tweet.timestamp}"
+      tweet.account.bio.empty? ? puts("#{tweet.account.name}") : puts("#{tweet.account.name}: #{tweet.account.bio}")
       puts "#{tweet.message}"
     end
   end
@@ -47,6 +52,7 @@ class LastTweet::CLI
   def goodbye
     puts
     puts "Goodbye!"
+    puts
   end
 
 end
