@@ -8,17 +8,18 @@ class TodaysTweets::CLI
   end
 
   def welcome
-    puts "Please specify one or more Twitter handles to see their most recent tweets."
-    puts "Example 1: @twitter_handle"
-    puts "Example 2: @twitter_handle1, @twitter_handle2"
+    puts
+    puts "Please specify one or more Twitter handles to see their most recent tweet."
+    puts "Sample format 1: @twitter_handle"
+    puts "Sample format 2: @twitter_handle1, @twitter_handle2, etc."
     puts
   end
 
   def show_popular
-    puts "For reference the 5 most popular accounts are listed below."
+    puts "If interested the 5 most popular accounts are listed below."
     twitter_accounts = TodaysTweets::TwitterAccount.most_popular
     twitter_accounts.each.with_index(1) do |account,i|
-      puts "#{{i}: account.name - account.handle}"
+      puts "#{i}: #{account.name} - #{account.handle}"
     end
     puts
   end
