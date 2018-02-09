@@ -1,3 +1,3 @@
-module TodaysTweets
+module LastTweet
   VERSION = "0.1.0"
 end

@@ -1,4 +1,4 @@
-class TodaysTweets::TwitterAccount
+class LastTweet::TwitterAccount
   attr_accessor :handle, :url, :name, :bio, :tweet
   @@all = []
 
@@ -16,7 +16,7 @@ class TodaysTweets::TwitterAccount
       bio_qry        = ["div.ProfileHeaderCard p.ProfileHeaderCard-bio", "text"]
       tweet_qry      = ["div.tweet div.content div.js-tweet-text-container p.tweet-text", "text"]
       what_to_scrape = {name: name_qry, bio: bio_qry, tweet: tweet_qry}
-      twitter_hash   = TodaysTweets::Scraper.scrape(account.url, what_to_scrape)
+      twitter_hash   = LastTweet::Scraper.scrape(account.url, what_to_scrape)
 
       account.name   = twitter_hash[:name]
       account.bio    = twitter_hash[:bio]
@@ -32,7 +32,7 @@ class TodaysTweets::TwitterAccount
       base_qry       = "div\#list-container ul.view-list li.row-#{i+1} div.text-holder "
       handle_qry     = [base_qry + "a", "text"]
       what_to_scrape = {handle: handle_qry}
-      twitter_hash   = TodaysTweets::Scraper.scrape(url, what_to_scrape)
+      twitter_hash   = LastTweet::Scraper.scrape(url, what_to_scrape)
       create_from_handle(twitter_hash[:handle])
     end
   end

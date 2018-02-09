@@ -1,4 +1,4 @@
-class TodaysTweets::Tweet
+class LastTweet::Tweet
   attr_accessor :account, :message, :timestamp
   BASE_PATH = "https://twitter.com/"
 
@@ -12,7 +12,7 @@ class TodaysTweets::Tweet
       account:   account_qry,
       message:   message_qry,
       timestamp: timestamp_qry}
-    TodaysTweets.Scraper.scrape(url, how_to_scrape)
+    LastTweet.Scraper.scrape(url, how_to_scrape)
   end
 
 end

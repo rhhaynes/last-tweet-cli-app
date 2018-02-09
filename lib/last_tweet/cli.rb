@@ -1,4 +1,4 @@
-class TodaysTweets::CLI
+class LastTweet::CLI
 
   def call
     welcome
@@ -17,7 +17,7 @@ class TodaysTweets::CLI
 
   def show_popular
     puts "If interested the 5 most popular accounts are listed below."
-    twitter_accounts = TodaysTweets::TwitterAccount.most_popular
+    twitter_accounts = LastTweet::TwitterAccount.most_popular
     twitter_accounts.each.with_index(1) do |account,i|
       puts "#{i}: #{account.name} - #{account.handle}"
     end
@@ -36,7 +36,7 @@ class TodaysTweets::CLI
 
   def show_tweets(twitter_handles)
     twitter_handles.collect do |handle|
-      tweet = TodaysTweets::Tweet.create_from_handle(handle)
+      tweet = LastTweet::Tweet.create_from_handle(handle)
       puts
       puts "#{tweet.account.name} (#{tweet.account.handle}) at #{tweet.timestamp}"
       puts "#{tweet.account.bio}" unless tweet.bio == nil

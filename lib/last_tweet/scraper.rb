@@ -1,4 +1,4 @@
-class TodaysTweets::Scraper
+class LastTweet::Scraper
 
   def self.scrape(url, what_to_scrape)
     page = Nokogiri::HTML(open(url))
