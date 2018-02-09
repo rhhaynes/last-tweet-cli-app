@@ -1,6 +1,8 @@
 source "https://rubygems.org"
 
-git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+require "nokogiri"
+require "open-uri"
+require "colorize"
+require "pry"
 
-# Specify your gem's dependencies in todays_tweets.gemspec
 gemspec
