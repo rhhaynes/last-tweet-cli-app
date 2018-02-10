@@ -10,8 +10,8 @@ class LastTweet::CLI
   def welcome
     puts
     puts "Please specify one or more Twitter handles to see their most recent tweet.".colorize(:white)
-    puts "Sample format 1: @twitter_handle".colorize(:blue)
-    puts "Sample format 2: @twitter_handle1, @twitter_handle2, etc.".colorize(:blue)
+    puts "Sample format 1: @twitter_handle".colorize(:white)
+    puts "Sample format 2: @twitter_handle1, @twitter_handle2, etc.".colorize(:white)
     puts
   end
 
