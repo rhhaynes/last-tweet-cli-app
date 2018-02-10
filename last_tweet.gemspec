@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["'Randall Harris Haynes'"]
   spec.email         = ["'harrishaynes@gmail.com'"]
 
-  spec.summary       = "Return the most recent tweet from all specified Twitter handles."
+  spec.summary       = "Returns the most recent tweet from all specified Twitter handles."
   spec.homepage      = "https://github.com/rhhaynes/last-tweet-cli-app"
   spec.license       = "MIT"
 
