@@ -30,4 +30,9 @@ class LastTweet::Tweet
     self.account.tweets << self unless self.account.tweets.include? self
   end
 
+  def remove
+    self.account.remove
+    @@all.delete(self)
+  end
+
 end

@@ -42,6 +42,7 @@ class LastTweet::CLI
       tweet = LastTweet::Tweet.create_from_handle(handle)
       if tweet.message == nil
         puts "Last tweet by #{tweet.account.handle} could not be found.  If correct, the account may be private or suspended.".colorize(:red)
+        tweet.remove
       else
         puts "#{tweet.account.handle} at #{tweet.timestamp}".colorize(:blue)
         tweet.account.bio.empty? ? puts("#{tweet.account.name}".colorize(:blue)) : puts("#{tweet.account.name}: #{tweet.account.bio}".colorize(:blue))

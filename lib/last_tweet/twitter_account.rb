@@ -36,4 +36,8 @@ class LastTweet::TwitterAccount
     end
   end
 
+  def remove
+    @@all.delete(self)
+  end
+
 end
