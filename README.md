@@ -4,7 +4,7 @@ Ruby gem that displays the most recent tweet from all specified Twitter handles.
 
 Before prompting for user input, a list of the 5 most popular Twitter accounts is provided based on http://friendorfollow.com/twitter/most-followers/.
 
-For each Twitter handle specified, the latest tweet is displayed by scraping [https://twitter.com/](https://twitter.com/)<@TwitterHandle\>.
+For each Twitter handle specified, the latest tweet is displayed by scraping [https://twitter.com/](https://twitter.com/)TwitterHandle.
 
 ## Usage
 
