@@ -4,7 +4,7 @@ Ruby gem that displays the most recent tweet from all specified Twitter handles.
 
 Before prompting for user input, a list of the 5 most popular Twitter accounts is provided based on http://friendorfollow.com/twitter/most-followers/.
 
-For each Twitter handle specified, the latest tweet is displayed by scraping https://twitter.com/@TwitterHandle.
+For each Twitter handle specified, the latest tweet is displayed by scraping https://twitter.com/\<@TwitterHandle\>.
 
 ## Usage
 
@@ -22,32 +22,32 @@ Please specify one or more Twitter handles to see their most recent tweet.
 Sample format 1: @twitter_handle
 Sample format 2: @twitter_handle1, @twitter_handle2, etc.
 
-- If interested the 5 most popular accounts are listed below.
-+ 1: KATY PERRY - @katyperry
-+ 2: Justin Bieber - @justinbieber
-+ 3: Barack Obama - @BarackObama
-+ 4: Rihanna - @rihanna
-+ 5: Taylor Swift - @taylorswift13
+If interested the 5 most popular accounts are listed below.
+- 1: KATY PERRY - @katyperry
+- 2: Justin Bieber - @justinbieber
+- 3: Barack Obama - @BarackObama
+- 4: Rihanna - @rihanna
+- 5: Taylor Swift - @taylorswift13
 
-- Whose tweet(s) would you like to see?  Enter exit when finished.
-- @KingJames
-+ @KingJames at 5:06 PM - 9 Feb 2018
-+ LeBron James: EST. AKRON - ST.V/M Class of '03  http://LeBronJamesFamilyFoundation.org  #IPROMISE
-+ LeBron's #NBAKicks in ATL.pic.twitter.com/3m94adb4sH
+Whose tweet(s) would you like to see?  Enter exit when finished.
++ @taylorswift13
+- @taylorswift13 at 2:24 PM - 5 Feb 2018
+- Taylor Swift: The old Taylor can't come to the phone right now.
+- Songs I’m loving right now http://Taylor.lk/SongsTaylorLoves …
 
-- Whose tweet(s) would you like to see next?  Enter exit when finished.
-- @SpaceX, @elonmusk
-+ @SpaceX at 7:46 PM - 6 Feb 2018
-+ SpaceX: SpaceX designs, manufactures and launches the world’s most advanced rockets and spacecraft.
-+ Third burn successful. Exceeded Mars orbit and kept going to the Asteroid Belt.pic.twitter.com/bKhRN73WHF
+Whose tweet(s) would you like to see next?  Enter exit when finished.
++ @SpaceX, @elonmusk
+- @SpaceX at 7:46 PM - 6 Feb 2018
+- SpaceX: SpaceX designs, manufactures and launches the world’s most advanced rockets and spacecraft.
+- Third burn successful. Exceeded Mars orbit and kept going to the Asteroid Belt.pic.twitter.com/bKhRN73WHF
 
-+ @elonmusk at 2:01 PM - 7 Feb 2018
-+ Elon Musk
-+ Last pic of Starman in Roadster on its journey to Mars orbit and then the Asteroid Belt https://www.instagram.com/p/Be6VZEzgAEk/
+- @elonmusk at 2:01 PM - 7 Feb 2018
+- Elon Musk
+- Last pic of Starman in Roadster on its journey to Mars orbit and then the Asteroid Belt https://www.instagram.com/p/Be6VZEzgAEk/
 
-- Whose tweet(s) would you like to see next?  Enter exit when finished.
-- exit
-+ Goodbye!
+Whose tweet(s) would you like to see next?  Enter exit when finished.
++ exit
+- Goodbye!
 ```
 
 ## Installation
