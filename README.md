@@ -1,4 +1,4 @@
-# LastTweet
+# last_tweet
 
 Ruby gem that displays the most recent tweet from all specified Twitter handles.
 
@@ -12,12 +12,9 @@ Run `last_tweet` after installing the gem.
 
 ### Example
 
-```ruby
-require 'last_tweet'
-
-last_tweet
-```
 ```diff
++ last_tweet
+
 Please specify one or more Twitter handles to see their most recent tweet.
 Sample format 1: @twitter_handle
 Sample format 2: @twitter_handle1, @twitter_handle2, etc.
